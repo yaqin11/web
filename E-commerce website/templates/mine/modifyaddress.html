@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改地址</title>
+</head>
+<body>
+  <form action="/modify/" method="post">
+<div style="font-size: 5rem"><a href="/address_inf/" style="display:inline-block"><</a><span style="text-align: center">修改地址</span><button style="float: right;font-size: 3rem"type="submit">保存</button></div>
+{#      {% for ad in address %}#}
+<div style="font-size: 3rem">联系人:&nbsp&nbsp&nbsp&nbsp<input name="name" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.name }}" > </div><br />
+<div style="font-size: 3rem">性别:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name="sex" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.sex }}" /></div><br />
+<div style="font-size: 3rem">手机号码:&nbsp&nbsp&nbsp<input name="phoneNum" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.phoneNum }}" /></div><br />
+<div style="font-size: 3rem">邮编:&nbsp&nbsp&nbsp<input name="postCode" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.phoneNum }}" /></div><br />
+<div style="font-size: 3rem">收货地址:&nbsp&nbsp&nbsp<input name="address" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.address }}" /></div><br />
+<div style="font-size: 3rem">省份：&nbsp&nbsp&nbsp<input name="province" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.province }}" /></div><br />
+<div style="font-size: 3rem">所在城市:&nbsp&nbsp&nbsp<input name="city" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.city }}" /></div><br />
+      <div style="font-size: 3rem">所在区县:&nbsp&nbsp&nbsp<input name="county" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.county }}" /></div><br />
+      <div style="font-size: 3rem">街道:&nbsp&nbsp&nbsp<input name="street" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.street }}" /></div><br />
+<div style="font-size: 3rem">详细地址:&nbsp&nbsp&nbsp<input name="detailAddress" style="font-size: 3rem;border-color: #1b6d85" value="{{ ad.detailAddress }}" /></div><br />
+{#      {% endfor %}#}
+  </form>
+</body>
+</html>

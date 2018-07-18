@@ -1,0 +1,165 @@
+
+{% extends 'myApp/base.html' %}
+{% block title %}猜您喜欢{% endblock title %}
+
+{% block a1%}<a href="/bopintroduce/" class="active">猜您喜欢 <span class="sr-only">(current)</span></a>{% endblock a1 %}
+{% block login %}<li><a href="/login/">注销</a></li>{% endblock %}
+{% block content %}
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <h3 class="panel-heading">为您推荐！</h3>
+        <div class="panel-body">
+            <h5>为您推荐的第一个电影：</h5>
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">电影的ID：{{ intro_inf1.movie_id }}，电影的名称：{{ intro_inf1.title}}，电影类型：{{ intro_inf1.genres }}</li>
+                <li class="list-group-item">
+                    {% if prediction_score1 >= 4.5 %}
+                        喜爱程度：优
+                    {% elif prediction_score1 >= 4 %}
+                        喜爱程度：良
+                    {% elif prediction_score1 >= 3.5 %}
+                        喜爱程度：中等
+                    {% elif prediction_score1 >= 3 %}
+                        喜爱程度：一般
+                    {% else %}
+                        喜爱程度：偏低
+                    {% endif %}
+                </li>
+            </ul>
+            <p>
+                6040名用户有{{ ratecount1 }}个用户对该电影进行了评分， 其中有{{ ratecount1_1 }}个用户对该电影的评分在4分以上（5分制）<br />
+                喜欢该电影的用户还观看了评分在4分以上的以下电影：<br/>
+                电影ID：{{ umovie01_1.movie_id }}，电影名称：{{ umovie01_1.title }}，电影类型:{{ umovie01_1.genres }}<br/>
+                电影ID：{{ umovie02_1.movie_id }}，电影名称：{{ umovie02_1.title }}，电影类型:{{ umovie02_1.genres }}<br/>
+            </p>
+        </div>
+        <div class="panel-body">
+            <h5>为您推荐的第二个电影：</h5>
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">电影的ID：{{ intro_inf2.movie_id }}，电影的名称：{{ intro_inf2.title}}，电影类型：{{ intro_inf2.genres }}</li>
+                <li class="list-group-item">
+                    {% if prediction_score1 >= 4.5 %}
+                        喜爱程度：优
+                    {% elif prediction_score1 >= 4 %}
+                        喜爱程度：良
+                    {% elif prediction_score1 >= 3.5 %}
+                        喜爱程度：中等
+                    {% elif prediction_score1 >= 3 %}
+                        喜爱程度：一般
+                    {% else %}
+                        喜爱程度：偏低
+                    {% endif %}
+                </li>
+            </ul>
+            <p> 6040名用户有{{ ratecount1 }}个用户对该电影进行了评分， 其中有{{ ratecount1_1 }}个用户对该电影的评分在4分以上（5分制）<br/>
+                喜欢该电影的用户还观看了评分在4分以上的以下电影： <br />
+                电影ID：{{ umovie01_2.movie_id }}，电影名称：{{ umovie01_2.title}} ，电影类型:{{ umovie01_2.genres }}<br />
+                电影ID：{{ umovie02_2.movie_id }}，电影名称：{{ umovie02_2.title}} ，电影类型:{{ umovie02_2.genres }}<br />
+
+            </p>
+        </div>
+        <div class="panel-body">
+            <h5>为您推荐的第三个电影：</h5>
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">电影的ID：{{ intro_inf3.movie_id }}, 电影的名称：{{ intro_inf3.title}}, 电影类型：{{ intro_inf3.genres }}</li>
+                <li class="list-group-item">
+                    {% if prediction_score3 >= 4.5 %}
+                        喜爱程度：优
+                    {% elif prediction_score3 >= 4 %}
+                        喜爱程度：良
+                    {% elif prediction_score3 >= 3.5 %}
+                        喜爱程度：中等
+                    {% elif prediction_score3 >= 3 %}
+                        喜爱程度：一般
+                    {% else %}
+                        喜爱程度：偏低
+                    {% endif %}
+                </li>
+            </ul>
+            <p> 6040名用户有{{ ratecount3 }}个用户对该电影进行了评分， 其中有{{ ratecount3_1 }}个用户对该电影的评分在4分以上（5分制）<br/>
+                喜欢该电影的用户还观看了评分在4分以上的以下电影： <br />
+             电影ID：{{ umovie01_3.movie_id }}，电影名称：{{ umovie01_3.title}} ，电影类型:{{ umovie01_3.genres }}<br />
+                电影ID：{{ umovie02_3.movie_id }}，电影名称：{{ umovie02_3.title}} ，电影类型:{{ umovie02_3.genres }}<br />
+            </p>
+        </div>
+        <div class="panel-body">
+            <h5>为您推荐的第四个电影：</h5>
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">电影的ID：{{ intro_inf4.movie_id }}, 电影的名称：{{ intro_inf4.title}}, 电影类型：{{ intro_inf4.genres }}</li>
+                <li class="list-group-item">
+                    {% if prediction_score4 >= 4.5 %}
+                        喜爱程度：优
+                    {% elif prediction_score4 >= 4 %}
+                        喜爱程度：良
+                    {% elif prediction_score4 >= 3.5 %}
+                        喜爱程度：中等
+                    {% elif prediction_score4 >= 3 %}
+                        喜爱程度：一般
+                    {% else %}
+                        喜爱程度：偏低
+                    {% endif %}
+                </li>
+            </ul>
+            <p> 6040名用户有{{ ratecount4 }}个用户对该电影进行了评分， 其中有{{ ratecount4_1 }}个用户对该电影的评分在4分以上（5分制）<br/>
+                喜欢该电影的用户还观看了评分在4分以上的以下电影： <br />
+                 电影ID：{{ umovie01_4.movie_id }}，电影名称：{{ umovie01_4.title}} ，电影类型:{{ umovie01_4.genres }}<br />
+                电影ID：{{ umovie02_4.movie_id }}，电影名称：{{ umovie02_4.title}} ，电影类型:{{ umovie02_4.genres }}<br />
+            </p>
+        </div>
+        <div class="panel-body">
+            <h5>为您推荐的第五个电影：</h5>
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">电影的ID：{{ intro_inf5.movie_id }}, 电影的名称：{{ intro_inf5.title}}, 电影类型：{{ intro_inf5.genres }}</li>
+                <li class="list-group-item">
+                    {% if prediction_score5 >= 4.5 %}
+                        喜爱程度：优
+                    {% elif prediction_score5 >= 4 %}
+                        喜爱程度：良
+                    {% elif prediction_score5 >= 3.5 %}
+                        喜爱程度：中等
+                    {% elif prediction_score5 >= 3 %}
+                        喜爱程度：一般
+                    {% else %}
+                        喜爱程度：偏低
+                    {% endif %}
+                </li>
+            </ul>
+            <p> 6040名用户有{{ ratecount5 }}个用户对该电影进行了评分， 其中有{{ ratecount5_1 }}个用户对该电影的评分在4分以上（5分制）<br/>
+                喜欢该电影的用户还观看了评分在4分以上的以下电影： <br />
+                电影ID：{{ umovie01_5.movie_id }}，电影名称：{{ umovie01_5.title}} ，电影类型:{{ umovie01_5.genres }}<br />
+                电影ID：{{ umovie02_5.movie_id }}，电影名称：{{ umovie02_5.title}} ，电影类型:{{ umovie02_5.genres }}<br />
+            </p>
+        </div>
+        <div class="panel-body">
+            <h5>为您推荐的第六个电影：</h5>
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">电影的ID：{{ intro_inf6.movie_id }}, 电影的名称：{{ intro_inf6.title}}, 电影类型：{{ intro_inf6.genres }}</li>
+                <li class="list-group-item">
+                    {% if prediction_score1 >= 4.5 %}
+                        喜爱程度：优
+                    {% elif prediction_score1 >= 4 %}
+                        喜爱程度：良
+                    {% elif prediction_score1 >= 3.5 %}
+                        喜爱程度：中等
+                    {% elif prediction_score1 >= 3 %}
+                        喜爱程度：一般
+                    {% else %}
+                        喜爱程度：偏低
+                    {% endif %}
+                </li>
+            </ul>
+            <p> 6040名用户有{{ ratecount6 }}个用户对该电影进行了评分， 其中有{{ ratecount6_1 }}个用户对该电影的评分在4分以上（5分制）<br/>
+                喜欢该电影的用户还观看了评分在4分以上的以下电影： <br />
+                 电影ID：{{ umovie01_6.movie_id }}，电影名称：{{ umovie01_6.title}} ，电影类型:{{ umovie01_6.genres }}<br />
+                电影ID：{{ umovie02_6.movie_id }}，电影名称：{{ umovie02_6.title}} ，电影类型:{{ umovie02_6.genres }}<br />
+            </p>
+        </div>
+</div>
+{% endblock content %}
+

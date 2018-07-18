@@ -1,0 +1,30 @@
+{% extends 'myApp/base.html' %}
+
+{% block title %}用户详情{% endblock %}
+{% block login %}<li><a href="/login/">注销</a></li>{% endblock %}
+{% block content %}
+    <div class="form-group">
+        <label for="username">用户ID</label>
+        <input type="text" class="form-control" id="user_id" value="{{ user.user_id }}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="email">性别</label>
+        {% if user.gender == 'F' %}
+             <input type="text" class="form-control" id="gender" value="女" readonly>
+        {% else %}
+             <input type="text" class="form-control" id="gender" value="男" readonly>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label for="username">年龄</label>
+        <input type="text" class="form-control" id="age" value="{{ user.age }}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="username">职业编号</label>
+        <input type="text" class="form-control" id="occupation" value="{{ user.occupation }}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="username">邮编</label>
+        <input type="text" class="form-control" id="zip" value="{{ user.zip }}" readonly>
+    </div>
+{% endblock %}
