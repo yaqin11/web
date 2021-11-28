@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "home/favicon.ico" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'home/bootstrap.min.css' %}">
+    <script src="{% static 'home/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'home/popper.min.js' %}"></script>
+    <script src="{% static 'home/bootstrap.min.js' %}"></script>
+    <script src="{% static 'home/tools.js' %}"></script>
+</head>
+<body>
+
+<div class="text-center jumbotron">
+    <h1>My Django</h1>
+</div>
+
+<div class="container">
+    <a href="crawler" class="btn btn-lg btn-primary">Crawler</a>
+</div>
+
+</body>
+</html>

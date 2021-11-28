@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>搜索内容</title>
+</head>
+<body>
+    <form action="/app01/search-post/" method="post">
+        {% csrf_token %}
+        <input type="text" name="q">
+        <input type="submit" value="搜索">
+    </form>
+    <p>{{ post_key }}</p>
+</body>
+</html>
